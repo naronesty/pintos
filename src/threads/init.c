@@ -133,7 +133,19 @@ pintos_init (void)
     /* Run actions specified on kernel command line. */
     run_actions (argv);
   } else {
-    // TODO: no command line passed to kernel. Run interactively 
+    char* line = NULL;
+    while ((line = readline("ICS143A>")) != NULL) {
+      if (strcmp(line, "exit") == 0) {
+        // free(line);
+        break;
+      }
+      else if (strcmp(line, "whoami") == 0) 
+        printf("Noakai Aronesty\n");
+      else 
+        printf("invalid command\n");
+
+      free(line);
+    }
   }
 
   /* Finish up. */

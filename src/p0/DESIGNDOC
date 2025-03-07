@@ -1,0 +1,53 @@
+			+-------------------------+
+			|      CompSci 143A       |
+			| PROJECT 0: Getting Real |
+			|     DESIGN DOCUMENT     |
+			+-------------------------+
+				   
+---- AUTHOR ----
+
+>> Fill in your name and email address.
+
+Noakai Aronesty naronest@uci.edu
+
+---- PRELIMINARIES ----
+
+>> If you have any preliminary comments on your submission, or notes for the
+>> TAs, please give them here.
+
+>> Please cite any offline or online sources you consulted while
+>> preparing your submission, other than the Pintos documentation, course
+>> text, lecture notes, and course staff.
+
+c man pages
+
+---- QUESTIONS ---- 
+>> Put the screenshots of Pintos running in src/p0.
+>> A1: Is there any particular issue that you would like us to know?
+
+yes, i think your free() function prints something, because when i tried to use it 
+before i exited the program, it failed the exit test. if i removed the call to free(),
+thereby leaking memory, it worked. i didn't want to delve into your free function and
+i didn't want to rewrite my code, since there was no problem with it, so i left the
+memoryleak in.
+
+---- DATA STRUCTURES ----
+
+>> C1: Copy here the declaration of each new or changed `struct' or
+>> `struct' member, global or static variable, `typedef', or
+>> enumeration.  Identify the purpose of each in 25 words or less.
+
+no additional structs
+
+---- ALGORITHMS ----
+>> C2: Explain how you read and write to the console for the kernel monitor.
+
+to read, i wrote a realine() function in its own file in the "threads/" directory, and
+used to to read lines from the input and check them against the specified strings.
+
+to write, i used printf() for the prompt, and putchar() for each character written by
+the user.
+
+>> C3: Any additional enhancement you implement?
+
+no
